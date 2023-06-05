@@ -1,5 +1,6 @@
 body {
     background-color: #000000;
+    position: relative;
 }
 
 .container {
@@ -22,5 +23,25 @@ h1 {
     }
     to {
         transform: scale(1.1);
+    }
+}
+
+/* Updated CSS for the duck animation */
+
+.duck {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 50px; /* Adjust the width as desired */
+    animation: duckMove 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes duckMove {
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc(100% - 100px); /* Adjust the width and positioning of the duck */
     }
 }
